@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Du Lịch Mũi Né</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family:"Segoe UI",Arial;
+    background:#f2f7ff;
+    line-height:1.7;
+    font-weight:700;
+}
+header{
+    background:#0066cc;
+    border-bottom:4px solid #ff6600;
+}
+nav{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px;
+}
+nav h3{color:#fff}
+nav ul{list-style:none;display:flex;gap:20px}
+nav a{color:white;text-decoration:none}
+nav a:hover{color:#ffdd99}
+
+.banner{
+    height:380px;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    position:relative;
+    margin:15px;
+    border:6px solid #ff6600;
+    border-radius:12px;
+}
+.banner::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.25);
+}
+.banner-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+    text-align:center;
+    padding:25px 40px;
+    border:3px solid #ff6600;
+    border-radius:12px;
+    background:rgba(0,102,204,0.25);
+    z-index:1;
+}
+.banner-text h1{font-size:45px}
+.banner-text p{font-size:20px}
+
+.main{
+    max-width:1100px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    margin-top:-60px;
+    border-radius:12px;
+    border:3px solid #ff6600;
+}
+section{margin-top:40px}
+h2{
+    color:#ff6600;
+    margin-bottom:15px;
+    border-left:5px solid #ff6600;
+    padding-left:10px;
+}
+p{font-size:18px;text-align:justify}
+
+.two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    align-items:center;
+}
+.two-col img{
+    width:100%;
+    border-radius:12px;
+    border:3px solid #ff6600;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+.card{
+    background:#f8fbff;
+    border-radius:12px;
+    border:3px solid #ff6600;
+    transition:.3s;
+}
+.card:hover{transform:translateY(-6px)}
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+.card .content{padding:15px}
+
+form{
+    background:#f8fbff;
+    padding:20px;
+    border-radius:12px;
+    border:3px solid #ff6600;
+}
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border-radius:6px;
+    border:2px solid #ff6600;
+    font-weight:700;
+}
+button{
+    background:#ff6600;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:800;
+}
+button:hover{background:#e65c00}
+
+footer{
+    margin-top:40px;
+    background:#0066cc;
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-top:4px solid #ff6600;
+}
+
+@media(max-width:900px){
+    .two-col{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+    .cards{grid-template-columns:1fr}
+    .banner-text h1{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+    <h3>Mũi Né Travel</h3>
+    <ul>
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Địa điểm</a></li>
+        <li><a href="#">Thư viện</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+</nav>
+</header>
+
+<div class="banner">
+    <div class="banner-text">
+        <h1>Khám Phá Mũi Né</h1>
+        <p>Biển xanh – Cát trắng – Nắng vàng</p>
+    </div>
+</div>
+
+<div class="main">
+
+<section>
+<h2>Giới thiệu</h2>
+<p>Mũi Né là điểm đến du lịch nổi tiếng của Phan Thiết với biển xanh, đồi cát và làng chài ven biển.</p>
+</section>
+
+<section class="two-col">
+<div>
+    <h2>Biển Mũi Né</h2>
+    <p>Bãi biển trong xanh, sóng êm dịu, thích hợp nghỉ dưỡng.</p>
+</div>
+<img src="./images/bienmn.jpg">
+</section>
+
+<section>
+<h2>Điểm đến nổi bật</h2>
+<div class="cards">
+    <div class="card">
+        <img src="./images/doicatbay.jpg">
+        <div class="content">
+            <h3>Đồi Cát Bay</h3>
+            <p>Tiểu sa mạc độc đáo.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="./images/suoitien.jpg">
+        <div class="content">
+            <h3>Suối Tiên</h3>
+            <p>Dòng suối cổ tích.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="./images/langchai.jpg">
+        <div class="content">
+            <h3>Làng Chài</h3>
+            <p>Nét đẹp ngư dân.</p>
+        </div>
+    </div>
+</div>
+</section>
+
+<section>
+<h2>Liên hệ</h2>
+<form id="contactForm">
+    <input type="text" id="name" placeholder="Họ và tên">
+    <input type="date" id="dob">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="message" rows="3" placeholder="Nội dung"></textarea>
+    <textarea id="review" rows="3" placeholder="Nhận xét của bạn"></textarea>
+    <button type="submit">Gửi</button>
+    <p id="result"></p>
+</form>
+</section>
+
+</div>
+
+<footer>
+<p>&copy; 2025 – Website du lịch Mũi Né<br>
+Thiết kế bởi Nguyễn Vũ Đạt – Nguyễn Hiền Phú</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const dob = document.getElementById("dob").value;
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    const review = document.getElementById("review").value.trim();
+    const result = document.getElementById("result");
+
+    if(!name || !dob || !email || !message || !review){
+        result.style.color="red";
+        result.textContent="Vui lòng nhập đầy đủ thông tin!";
+        return;
+    }
+
+    result.style.color="green";
+    result.textContent="Gửi thành công!";
+    this.reset();
+});
+</script>
+
+</body>
+</html>
